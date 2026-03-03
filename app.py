@@ -82,6 +82,19 @@ def recommend_exercises(exercise_name):
     recommended = [(df.iloc[i[0]]["name"], round(i[1], 2)) for i in sorted_scores]
     
     return recommended
+    
+# ===== SIDEBAR STYLE FIX =====
+st.markdown("""
+<style>
+[data-testid="stSidebar"] {
+    background: linear-gradient(to bottom, #000428, #004e92);
+}
+
+[data-testid="stSidebar"] * {
+    color: white !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ===================== SIDEBAR FILTER =====================
 st.sidebar.header("Filter Options")
